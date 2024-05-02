@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    gap: 18%;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: 2%;
+}
+
+.navbar-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 70%;
+}
+
+
+/* Style 3: Just animate the :after element's width from 0 to 100% */
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar-item a {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #b8b8b8;
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.navbar-item a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    display: block;
+    transition: all 0.3s ease;
+    bottom: 25%;
+}
+
+.navbar-item a:hover::after {
+    width: 100%;
+    height: 3px;
+    background-color: #ff028d;
+}
+
+.btn-link-a {
+    display: block;
+    width: 100%;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+    
+}
+
+.main-title {
+    font-size: 9em;
+    font-weight: 900;
+    line-height: 1;
+    display: inline-flex;
+    max-width: 40vw;
+}
+
+
+.hero-banner-img {
+    width: 45vw;
+}
+
+.propuesta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 60vh;
+    background-image: url('assets/propuesta.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2em;
+}
+
+.propuesta-descripcion {
+    font-weight: 400;
+    width: 50%;
+    height: auto;
+    line-height: 2;
+    padding-right: 5%;
+    color: white;
+}
+
+.title-inverse {
+
+    font-size: 6em;
+    font-weight: 900;
+    text-align-last: right;
+    color: #1E23A1;
+    text-shadow: -2px 0px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.servicios-title {
+    width: 75%;
+    height: 100%;
+
+}
+
+.title-inverse-black {
+    font-size: 6em;
+    font-weight: 900;
+    color: #1E23A1;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.productos {
+    display: flex;
+    height: 40vh;
+    text-align: center;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicios-card-list {
+    display: flex;
+    gap: 5%;
+    height: auto;
+}
+
+.rectangle-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: stretch;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 5% 1%;
+    margin: 2%;
+
+}
+
+.card-xl {
+    width: 120%;
+}
+
+.rectangle-card h6 {
+    margin: 4vh 0;
+    font-weight: 900;
+    font-size: medium;
+}
+
+.mobile-font {
+    display: none;
+}
+
+.btn-primary {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #000000;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 1% 10%;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.btn-primary:hover {
+    background: #d9d9d9;
+    text-decoration: none;
+}
+
+footer {
+    height: 10vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+.line-height-3 {
+    line-height: 3em;
+}
+
+@media only screen and (max-width: 678px) {
+
+    main,
+    .info,
+    .navbar,
+    .navbar-item,
+    .hero {
+        flex-direction: column;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .navbar {
+        margin-bottom: 10%;
+
+    }
+
+    .navbar-item {
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .servicios,
+    .servicios-card-list {
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .propuesta {
+        flex-direction: column-reverse;
+    }
+
+    .propuesta-descripcion {
+        width: 100%;
+    }
+
+
+    .hero-banner-img {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 6em;
+        text-align: center;
+        max-width: 100vw;
+    }
+
+    .title-inverse-black,
+    .title-inverse {
+        font-size: 3em;
+        display: none;
+    }
+
+    .mobile-font {
+        display: block;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .card-xl {
+        width: auto;
+    }
+}
